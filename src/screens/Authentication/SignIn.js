@@ -63,7 +63,7 @@ export default function SignIn() {
               marginBottom: 14,
             }}
           >
-            Content de te revoir!
+            Bonjour!
           </Text>
           <Text
             style={{

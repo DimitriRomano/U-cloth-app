@@ -8,7 +8,7 @@ import { COLORS, FONTS } from "../../constants";
 const PRODUCTS = [
   {
     id: "1",
-    name: "Summer dress",
+    name: "Chemise femme",
     image: require("../../images/products/01.png"),
     sale: false,
     price: "42.89",
@@ -16,7 +16,7 @@ const PRODUCTS = [
   },
   {
     id: "2",
-    name: "Shoulder bag",
+    name: "Pull femme",
     image: require("../../images/products/02.png"),
     sale: true,
     price: "42.89",
@@ -24,7 +24,7 @@ const PRODUCTS = [
   },
   {
     id: "3",
-    name: "Summer dress",
+    name: "sous-vêtement",
     image: require("../../images/products/03.png"),
     sale: true,
     price: "30.00",
@@ -57,8 +57,8 @@ export default function Wishlist() {
 
   function addToCart(name) {
     return showMessage({
-      message: "Success",
-      description: `${name} is added to the cart.`,
+      message: "Succès",
+      description: `${name} est ajouté au panier.`,
       type: "success",
     });
   }

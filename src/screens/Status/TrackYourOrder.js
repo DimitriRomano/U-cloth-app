@@ -11,7 +11,7 @@ export default function TrackYourOrder() {
   function renderHeader() {
     return (
       <TopNav
-        text="Merci pour votre commande"
+        text="Merci pour la commande"
         back={true}
         backOnPress={() => navigation.goBack()}
       />

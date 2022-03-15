@@ -97,38 +97,38 @@ const PRODUCT_COLORS = [
 const PRODUCT_COMMENTS = [
   {
     id: "1",
-    name: "Annette Black",
+    name: "Chehem Mohamed",
     photo: require("../images/icons/02.png"),
     date: "23 Jan 2022",
     comment:
-      "Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.",
+      "Avec U-Cloth, Cherchez moins, Trouvez mieux. Cette application te permettra de trouver facilement tes futurs vêtements, selon tes critères de style",
     rating: 3,
   },
   {
     id: "2",
-    name: "Jenny Wilson",
+    name: "Bourhan Daoud",
     photo: require("../images/icons/03.png"),
     date: "23 Jan 2022",
     comment:
-      "Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.",
+      "Avec U-Cloth, Cherchez moins, Trouvez mieux. Cette application te permettra de trouver facilement tes futurs vêtements, selon tes critères de style",
     rating: 3,
   },
   {
     id: "3",
-    name: "Cameron Williamson",
+    name: "Fatouma Ahmed",
     photo: require("../images/icons/04.png"),
     date: "23 Jan 2022",
     comment:
-      "Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.",
+      "Avec U-Cloth, Cherchez moins, Trouvez mieux. Cette application te permettra de trouver facilement tes futurs vêtements, selon tes critères de style",
     rating: 3,
   },
   {
     id: "4",
-    name: "Theresa Webb",
+    name: "Houmed Zakria",
     photo: require("../images/icons/05.png"),
     date: "23 Jan 2022",
     comment:
-      "Consequat ut ea dolor aliqua laborum tempor Lorem culpa. Commodo veniam sint est mollit proident commodo.",
+      "Avec U-Cloth, Cherchez moins, Trouvez mieux. Cette application te permettra de trouver facilement tes futurs vêtements, selon tes critères de style",
     rating: 3,
   },
 ];
@@ -251,7 +251,7 @@ export default function Product() {
   function addToCart(name) {
     return showMessage({
       message: "Success",
-      description: `${name} is added to the cart.`,
+      description: `${name} est ajouté au panier.`,
       type: "success",
     });
   }
@@ -272,7 +272,7 @@ export default function Product() {
               color: COLORS.black,
             }}
           >
-            Knitted summer top
+            Chemise lacoste
           </Text>
           <TouchableOpacity
             onPress={() => {
@@ -366,7 +366,7 @@ export default function Product() {
               marginBottom: 14,
             }}
           >
-            Size
+            Taille
           </Text>
           <View
             style={{
@@ -423,7 +423,7 @@ export default function Product() {
               marginRight: 25,
             }}
           >
-            Color
+            Couleur
           </Text>
 
           {PRODUCT_COLORS.map((item, index) => (
@@ -466,15 +466,15 @@ export default function Product() {
             marginBottom: 20,
           }}
         >
-          Amet amet Lorem eu consectetur in deserunt nostrud dolor culpa ad sint
-          amet. Nostrud deserunt consectetur culpa minim mollit veniam aliquip
-          pariatur exercitation ullamco ea voluptate et. Pariatur ipsum mollit
-          magna proident nisi ipsum.
+          Cette chemise cintrée Calvin Klein en coton dobby à imprimé pois, est
+          munie d'un col italien, de manches longues, de poignets cassés à 1
+          bouton ajustable, d'une fermeture boutonnée, du monogramme brodé sur
+          le côté gauche de la poitrine et d'une base arrondie.
         </Text>
         <Button
-          text="+ ADd to cart"
+          text="+ Ajouter au panier"
           containerStyle={{ marginBottom: 40 }}
-          onPress={() => addToCart("Knitted summer top")}
+          onPress={() => addToCart("Chemise lacoste")}
         />
       </View>
     );
@@ -491,7 +491,9 @@ export default function Product() {
             alignItems: "center",
           }}
         >
-          <Text style={{ ...FONTS.H3, color: COLORS.black }}>Reviews (23)</Text>
+          <Text style={{ ...FONTS.H3, color: COLORS.black }}>
+            Commentaires (23)
+          </Text>
           <TouchableOpacity onPress={() => navigation.navigate("Reviews")}>
             <ViewAll />
           </TouchableOpacity>

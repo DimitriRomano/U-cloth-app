@@ -44,7 +44,7 @@ export default function OrderSuccess() {
           Votre commande sera livrée à temps. Merci!
         </Text>
         <Button
-          text="View orders"
+          text="Afficher les commandes"
           containerStyle={{
             marginBottom: 23,
           }}

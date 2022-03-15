@@ -17,7 +17,7 @@ import { useNavigation } from "@react-navigation/native";
 const SLIDES = [
   {
     id: "1",
-    title: "Welcome to U-Cloth!",
+    title: "Bienvenue  U-Cloth!",
     description: "Application de recherche de vêtement responsables.",
     img: require("../../images/onboarding/01.png"),
   },

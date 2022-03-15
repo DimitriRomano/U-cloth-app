@@ -15,19 +15,19 @@ import { ANDROIDSAFEAREAVIEW, COLORS, FONTS } from "../../constants";
 const CATEGORIES = [
   {
     id: "1",
-    text: "Men",
+    text: "Homme",
   },
   {
     id: "2",
-    text: "woMen",
+    text: "Femme",
   },
   {
     id: "3",
-    text: "kids",
+    text: "Enfants",
   },
   {
     id: "4",
-    text: "kids",
+    text: "Ados",
   },
   {
     id: "5",
@@ -38,7 +38,7 @@ const CATEGORIES = [
 const CLOTHING_CATEGORIES = [
   {
     id: "1",
-    text: "Dresses",
+    text: "chemise",
     image: require("../../images/categories/01.png"),
   },
   {
@@ -48,18 +48,38 @@ const CLOTHING_CATEGORIES = [
   },
   {
     id: "3",
-    text: "Accessories",
+    text: "sous-vetement",
     image: require("../../images/categories/03.png"),
   },
   {
     id: "4",
-    text: "Shoes",
+    text: "pantalon",
     image: require("../../images/categories/09.png"),
   },
   {
     id: "5",
     text: "T-shirts",
     image: require("../../images/categories/12.png"),
+  },
+  {
+    id: "6",
+    text: "pantalon",
+    image: require("../../images/categories/12.png"),
+  },
+  {
+    id: "7",
+    text: "T-shirts",
+    image: require("../../images/categories/pantalon1.png"),
+  },
+  {
+    id: "8",
+    text: "pantalon",
+    image: require("../../images/categories/pantalon2.png"),
+  },
+  {
+    id: "9",
+    text: "T-shirts",
+    image: require("../../images/categories/pantalon3.png"),
   },
 ];
 
@@ -303,6 +323,231 @@ export default function Search() {
               );
             }
             if (index == 4) {
+              return (
+                <TouchableOpacity
+                  key={item.id}
+                  style={{
+                    width: "50%",
+                    height: 200,
+                    borderColor: COLORS.white,
+                    borderBottomWidth: 1,
+                  }}
+                >
+                  <Image
+                    source={item.image}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                  <View
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      backgroundColor: "rgba(23,28,49, 0.4)",
+                    }}
+                  />
+                  <View
+                    style={{
+                      position: "absolute",
+                      bottom: 20,
+                      left: 20,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        ...FONTS.H3,
+                        color: COLORS.white,
+                      }}
+                    >
+                      {item.text}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            }
+            if (index == 5) {
+              return (
+                <TouchableOpacity
+                  key={item.id}
+                  style={{
+                    width: "50%",
+                    height: 200,
+                    borderColor: COLORS.white,
+                    borderBottomWidth: 1,
+                  }}
+                >
+                  <Image
+                    source={item.image}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                  <View
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      backgroundColor: "rgba(23,28,49, 0.4)",
+                    }}
+                  />
+                  <View
+                    style={{
+                      position: "absolute",
+                      bottom: 20,
+                      left: 20,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        ...FONTS.H3,
+                        color: COLORS.white,
+                      }}
+                    >
+                      {item.text}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            }
+            if (index == 6) {
+              return (
+                <TouchableOpacity
+                  key={item.id}
+                  style={{
+                    width: "50%",
+                    height: 200,
+                    borderColor: COLORS.white,
+                    borderBottomWidth: 1,
+                  }}
+                >
+                  <Image
+                    source={item.image}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                  <View
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      backgroundColor: "rgba(23,28,49, 0.4)",
+                    }}
+                  />
+                  <View
+                    style={{
+                      position: "absolute",
+                      bottom: 20,
+                      left: 20,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        ...FONTS.H3,
+                        color: COLORS.white,
+                      }}
+                    >
+                      {item.text}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            }
+            if (index == 7) {
+              return (
+                <TouchableOpacity
+                  key={item.id}
+                  style={{
+                    width: "50%",
+                    height: 200,
+                    borderColor: COLORS.white,
+                    borderBottomWidth: 1,
+                  }}
+                >
+                  <Image
+                    source={item.image}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                  <View
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      backgroundColor: "rgba(23,28,49, 0.4)",
+                    }}
+                  />
+                  <View
+                    style={{
+                      position: "absolute",
+                      bottom: 20,
+                      left: 20,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        ...FONTS.H3,
+                        color: COLORS.white,
+                      }}
+                    >
+                      {item.text}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            }
+            if (index == 8) {
+              return (
+                <TouchableOpacity
+                  key={item.id}
+                  style={{
+                    width: "50%",
+                    height: 200,
+                    borderColor: COLORS.white,
+                    borderBottomWidth: 1,
+                  }}
+                >
+                  <Image
+                    source={item.image}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                  <View
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      backgroundColor: "rgba(23,28,49, 0.4)",
+                    }}
+                  />
+                  <View
+                    style={{
+                      position: "absolute",
+                      bottom: 20,
+                      left: 20,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        ...FONTS.H3,
+                        color: COLORS.white,
+                      }}
+                    >
+                      {item.text}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            }
+            if (index == 9) {
               return (
                 <TouchableOpacity
                   key={item.id}

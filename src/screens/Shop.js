@@ -134,7 +134,7 @@ export default function Shop() {
   function addToCart(name) {
     return showMessage({
       message: "Success",
-      description: `${name} is added to the cart.`,
+      description: `${name} est ajouté au panier`,
       type: "success",
     });
   }

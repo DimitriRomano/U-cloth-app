@@ -18,20 +18,20 @@ import { COLORS, SIZES, FONTS } from "../../constants";
 const SLIDE = [
   {
     id: "1",
-    description: "Bienvenue à U-Cloth!",
-    discount: "50% reduction",
+    // description: "Bienvenue à U-Cloth!",
+    // discount: "50% reduction",
     image: require("../../images/slide/01.png"),
   },
   {
     id: "2",
-    description: "Bienvenue à U-Cloth!",
-    discount: "50% reduction",
+    // description: "Bienvenue à U-Cloth!",
+    // discount: "50% reduction",
     image: require("../../images/slide/02.png"),
   },
   {
     id: "3",
-    description: "Bienvenue à U-Cloth!",
-    discount: "50% reduction",
+    // description: "Bienvenue à U-Cloth!",
+    // discount: "50% reduction",
     image: require("../../images/slide/03.png"),
   },
 ];
@@ -170,6 +170,12 @@ export default function Home() {
       />
     );
   }
+
+  // function renderBanner() {
+  //   const updatmahami = containerstyle ={
+  //     borderBottomWidth= Mohalmed chehel
+  //   }
+  // }
 
   function renderSlide() {
     function renderDots() {

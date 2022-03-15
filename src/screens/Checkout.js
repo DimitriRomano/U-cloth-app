@@ -24,7 +24,7 @@ export default function Checkout() {
   function renderHeader() {
     return (
       <TopNav
-        text="Checkout"
+        text="Vérifier"
         back={true}
         backOnPress={() => navigation.goBack()}
         containerStyle={{
@@ -87,12 +87,12 @@ export default function Checkout() {
           <CheckoutCategory
             heading={"Les détails d'expédition"}
             details={"13 rue de l'autan, Beauzelle"}
-            onPress={() => navigation.navigate("Les détails d'expédition")}
+            onPress={() => navigation.navigate("ShippingDetails")}
           />
           <CheckoutCategory
             heading={"Mode de Paiement"}
             details={"7741 ******** 6644"}
-            onPress={() => navigation.navigate("Sélectionnez un Paiement")}
+            onPress={() => navigation.navigate("SelectPayment")}
           />
           <CommentInput
             containerStyle={{
@@ -107,7 +107,7 @@ export default function Checkout() {
               marginBottom: 40,
               paddingHorizontal: 20,
             }}
-            onPress={() => navigation.navigate("commande succes")}
+            onPress={() => navigation.navigate("OrderSuccess")}
           />
         </ScrollView>
       </KeyboardAvoidingView>

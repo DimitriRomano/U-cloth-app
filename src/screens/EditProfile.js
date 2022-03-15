@@ -19,7 +19,7 @@ export default function EditProfile() {
   function renderHeader() {
     return (
       <TopNav
-        text="Edit profile"
+        text="Modifier profil"
         back={true}
         bag={true}
         backOnPress={() => navigation.goBack()}
@@ -89,7 +89,7 @@ export default function EditProfile() {
             />
           </View>
           <Button
-            text={"Sauvegarder les modifications"}
+            text={"Sauvegarder"}
             onPress={() => navigation.goBack()}
             containerStyle={{ paddingHorizontal: 20 }}
           />

@@ -87,9 +87,7 @@ export default function PaymentMethod() {
           >
             Carte
           </Text>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("Nouvelle carte")}
-          >
+          <TouchableOpacity onPress={() => navigation.navigate("AddNewCard")}>
             <AddANewCard />
           </TouchableOpacity>
         </View>

@@ -292,7 +292,7 @@ export default function Order() {
             </Text>
           </View>
           <Button
-            text="proceed to checkout"
+            text="Payer"
             onPress={() => navigation.navigate("Checkout")}
             containerStyle={{ marginBottom: 30 }}
           />
