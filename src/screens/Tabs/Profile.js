@@ -44,13 +44,13 @@ export default function Profile() {
         }}
         showsVerticalScrollIndicator={false}
       >
-        <Line containerStyle={{ marginTop: 23, marginBottom: 20 }} />
+        {/* <Line containerStyle={{ marginTop: 23, marginBottom: 20 }} /> */}
         <TouchableOpacity
           style={{ width: 126, height: 126, marginBottom: 20 }}
           onPress={() => navigation.navigate("EditProfile")}
         >
           <Image
-            source={require("../../images/icons/11.png")}
+            source={require("../../images/icons/01.png")}
             style={{
               width: "100%",
               height: "100%",
@@ -59,9 +59,9 @@ export default function Profile() {
               borderColor: COLORS.lightBlue,
             }}
           />
-          <View style={{ position: "absolute", right: 0, bottom: 0 }}>
+          {/* <View style={{ position: "absolute", right: 0, bottom: 0 }}>
             <ProfileEdit />
-          </View>
+          </View> */}
         </TouchableOpacity>
 
         <Text style={{ ...FONTS.H3, color: COLORS.black }}>Mohamed Chehem</Text>
@@ -78,10 +78,10 @@ export default function Profile() {
         </Text>
         <View style={{ width: "100%" }}>
           <ProfileCategory
-            text="History des commandes"
+            text="Modifier mon profil"
             rightIcon={true}
             icon={<Calendar />}
-            onPress={() => navigation.navigate("OrderHistory")}
+            onPress={() => navigation.navigate("EditProfile")}
           />
           <ProfileCategory
             text="Mode de Paiement"

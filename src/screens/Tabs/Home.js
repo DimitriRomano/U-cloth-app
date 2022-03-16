@@ -160,13 +160,13 @@ export default function Home() {
   function renderHeader() {
     return (
       <TopNav
-        menu={true}
-        logo={true}
+        menu={false}
+        search={true}
         containerStyle={{
           borderBottomWidth: 1,
           borderColor: COLORS.lightBlue,
         }}
-        bag={true}
+        bag={false}
       />
     );
   }

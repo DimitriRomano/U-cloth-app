@@ -46,7 +46,7 @@ export default function PaymentMethod() {
   function renderHeader() {
     return (
       <TopNav
-        text="Payment method"
+        text="Mode Paiement"
         navigation={true}
         back={true}
         containerStyle={{
@@ -68,7 +68,9 @@ export default function PaymentMethod() {
             paddingBottom: 14,
           }}
         >
-          <Text style={{ ...FONTS.H4, color: COLORS.black }}>Credit cards</Text>
+          <Text style={{ ...FONTS.H4, color: COLORS.black }}>
+            Carte Bancaire
+          </Text>
         </View>
         <View
           style={{

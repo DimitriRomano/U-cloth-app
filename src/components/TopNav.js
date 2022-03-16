@@ -78,6 +78,7 @@ export default function TopNav({
             left: 0,
             alignItems: "center",
             paddingLeft: 20,
+            //   backgroundColor: "red",
           }}
         >
           <TouchableOpacity onPress={() => setShowModal(true)}>
@@ -92,6 +93,7 @@ export default function TopNav({
             textAlign: "center",
             color: COLORS.black,
             textTransform: "capitalize",
+            //backgroundColor: "red",
           }}
         >
           {text}
@@ -102,7 +104,9 @@ export default function TopNav({
           style={{
             flexDirection: "row",
             alignItems: "center",
-            width: SIZES.width - 200,
+            width: SIZES.width - 80,
+            backgroundColor: COLORS.gris,
+            borderRadius: 10,
           }}
         >
           <View style={{ marginRight: 7 }}>

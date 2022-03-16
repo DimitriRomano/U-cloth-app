@@ -34,7 +34,6 @@ export default function SignIn() {
   function renderHeader() {
     return (
       <TopNav
-        text="Connexion"
         navigation={true}
         backOnPress={() => navigation.goBack()}
         back={true}
@@ -46,7 +45,7 @@ export default function SignIn() {
     return (
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={{ flex: 1 }}
+        style={{ flex: 1, border: 5 }}
       >
         <ScrollView
           contentContainerStyle={{
@@ -55,7 +54,7 @@ export default function SignIn() {
           }}
           showsVerticalScrollIndicator={false}
         >
-          <Line containerStyle={{ marginBottom: 14 }} />
+          {/* <Line containerStyle={{ marginBottom: 14 }} /> */}
           <Text
             style={{
               textAlign: "center",
@@ -63,7 +62,7 @@ export default function SignIn() {
               marginBottom: 14,
             }}
           >
-            Bonjour!
+            Bienvenue!
           </Text>
           <Text
             style={{
@@ -78,7 +77,7 @@ export default function SignIn() {
           </Text>
           <InputField
             text="Email"
-            placeholder="mohamedchehem@mail.com"
+            placeholder="chehem@gmail.com"
             containerStyle={{ marginBottom: 20 }}
             icon={
               <View
