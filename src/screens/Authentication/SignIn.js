@@ -45,7 +45,7 @@ export default function SignIn() {
     return (
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={{ flex: 1, border: 5 }}
+        style={{ flex: 1 }}
       >
         <ScrollView
           contentContainerStyle={{

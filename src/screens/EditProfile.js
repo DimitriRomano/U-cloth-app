@@ -40,7 +40,7 @@ export default function EditProfile() {
           }}
           showsVerticalScrollIndicator={false}
         >
-          <Line containerStyle={{ marginTop: 23, marginBottom: 20 }} />
+          {/* //<Line containerStyle={{ marginTop: 23, marginBottom: 20 }} /> */}
           <TouchableOpacity
             style={{ width: 126, height: 126, marginBottom: 45 }}
             onPress={() => navigation.navigate("EditProfile")}

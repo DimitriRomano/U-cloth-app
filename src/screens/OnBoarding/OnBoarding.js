@@ -107,7 +107,7 @@ export default function OnBoarding() {
                 }}
               >
                 <View style={{ height: 20 }} />
-                <Line />
+                {/* <Line /> */}
                 <Text
                   style={{
                     marginVertical: 14,

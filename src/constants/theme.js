@@ -57,7 +57,7 @@ const FONTS = {
 const ANDROIDSAFEAREAVIEW = {
   AndroidSafeArea: {
     flex: 1,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.black,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 };

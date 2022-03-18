@@ -198,7 +198,7 @@ export default function HomeTwo() {
             }}
           >
             <Text style={{ ...FONTS.H2, color: COLORS.white }}>
-              Take 50% off!
+              50% reduction!
             </Text>
             <View
               style={{

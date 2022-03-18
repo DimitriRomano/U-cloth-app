@@ -11,6 +11,7 @@ import {
   Gift,
   ProfileEdit,
   SignOutModal,
+  Like,
 } from "../../components";
 import { useNavigation } from "@react-navigation/native";
 
@@ -21,19 +22,19 @@ export default function Profile() {
 
   const [showModal, setShowModal] = useState(false);
 
-  function renderHeader() {
-    return (
-      <TopNav
-        text="Mon Profil"
-        menu={true}
-        bag={true}
-        containerStyle={{
-          borderBottomWidth: 1,
-          borderBottomColor: COLORS.lightBlue,
-        }}
-      />
-    );
-  }
+  // function renderHeader() {
+  //   return (
+  //     <TopNav
+  //       text="Mon Profil"
+  //       menu={true}
+  //       bag={true}
+  //       containerStyle={{
+  //         borderBottomWidth: 1,
+  //         borderBottomColor: COLORS.lightBlue,
+  //       }}
+  //     />
+  //   );
+  // }
 
   function renderContent() {
     return (
@@ -101,6 +102,12 @@ export default function Profile() {
             icon={<Gift />}
             onPress={() => navigation.navigate("MyPromoCodes")}
           />
+          {/* <ProfileCategory
+            text="Wishlist"
+            rightIcon={true}
+            icon={<Like />}
+            onPress={() => navigation.navigate("Wishlist")}
+          /> */}
           <ProfileCategory
             text="Deconnecter"
             icon={<Calendar />}
@@ -129,7 +136,7 @@ export default function Profile() {
 
   return (
     <View style={{ flex: 1 }}>
-      {renderHeader()}
+      {/* {renderHeader()} */}
       {renderContent()}
       {renderModal()}
     </View>
