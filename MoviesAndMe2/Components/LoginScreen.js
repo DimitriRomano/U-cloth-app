@@ -15,15 +15,22 @@ const LoginScreen = () => {
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior="padding">
+      <View style={styles.headContainer}>
+        <Text style={styles.welcome}>Bienvenue,</Text>
+        <Text style={styles.title}>Se connecter ou s'inscrire</Text>
+      </View>
+      <View>
+        
+      </View>
       <View style={styles.inputContainer}>
+        <Text style={styles.email}>Email</Text>
         <TextInput
-          placeholder="Email"
           value={email}
           onChangeText={text => setEmail(text) }
           style={styles.input}
         />
+        <Text style={styles.password}>Password</Text>
         <TextInput
-          placeholder="Password"
           value={password}
           onChangeText={text => setPassword(text) }
           style={styles.input}
@@ -33,17 +40,11 @@ const LoginScreen = () => {
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={() => {}} style={styles.button}>
-          <Text style={styles.buttonText}>Login</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {}}
-          style={(styles.button, styles.buttonOutline)}
-        >
-          <Text style={(styles.button, styles.buttonOutlineText)}>
-            Register
-          </Text>
+          <Text style={styles.buttonText}>Se connecter</Text>
         </TouchableOpacity>
       </View>
+
+      <Text style={styles.or}>-OU-</Text>
     </KeyboardAvoidingView>
   );
 };
@@ -52,28 +53,41 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    flex: 1
+  },
+  headContainer:{
+    marginTop: 70,
+    marginBottom: 0,
+    marginLeft: 5
+  },
+  welcome: {
+    fontSize: 30
+  },
+  title: {
+    color: "gray"
   },
   inputContainer:{
       width: '80%',
+      marginLeft: 5
   },
-  intput:{
-      backgroundColor:'white',
-      paddingHorizontal: 15,
-      paddingVertical: 10,
-      borderRadius: 10,
-      marginTop: 5,
+  email: {
+    color: "gray",
+    marginTop: 20
+  },
+  password: {
+    color: "gray",
+    marginTop: 20
+  },
+  input:{
+      marginTop: 10,
   },
   buttonContainer:{
-      width: '60%',
+      backgroundColor: '#0782F9',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 40,
+      marginTop: 50,
   },
   button:{
-      backgroundColor: '#0782F9',
       width: '100%',
       padding: 15,
       borderRadius: 10,
@@ -97,6 +111,11 @@ const styles = StyleSheet.create({
       fontWeight: '700',
       fontSize: 16,
   },
-  
+  or: {
+    alignSelf: "center",
+    fontSize: 20,
+    marginTop: 20,
+    marginBottom: 20
+  }
 
 });

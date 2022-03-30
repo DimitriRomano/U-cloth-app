@@ -62,6 +62,23 @@ export default function MoviesTabNavigator() {
           tabBarShowLabel: false,
         }}
       >
+      <Tab.Screen
+        name="Login"
+        component={LoginStackNavigator}
+        options={{
+          headerShown: false,
+          // On définit le rendu de nos icônes par les images récemment ajoutés au projet
+          tabBarIcon: () => {
+            return (
+              <Image
+                source={require("../Images/ic_favorite.png")}
+                // On applique un style pour les redimensionner comme il faut
+                style={styles.icon}
+              />
+            );
+          },
+        }}
+      />
         <Tab.Screen
           name="Search"
           component={SearchStackNavigator}
