@@ -171,6 +171,10 @@ export default function Home() {
     );
   }
 
+  function renderFooter() {
+    return <Footer />;
+  }
+
   function renderSlide() {
     function renderDots() {
       return (
