@@ -21,7 +21,6 @@ const RegisterScreen = () => {
           <View style={styles.headContainer}>
             <Text style={styles.welcome}>S'inscrire</Text>
           </View>
-          <View></View>
           <View style={styles.inputContainer}>
             <Text style={styles.inputText}>Nom et prénom</Text>
             <View style={styles.underline}>
@@ -31,7 +30,6 @@ const RegisterScreen = () => {
               style={styles.input}
             />
             </View>
-            
             <Text style={styles.inputText}>Email</Text>
             <View style={styles.underline}>
               <TextInput
@@ -40,7 +38,6 @@ const RegisterScreen = () => {
                 style={styles.input}
               />
             </View>
-
             <Text style={styles.inputText}>Mot de passe</Text>
             <View style={styles.underline}>
               <TextInput
@@ -51,7 +48,6 @@ const RegisterScreen = () => {
               />
             </View>
           </View>
-
           <View style={[styles.buttonContainer, styles.standardConnexionBtn]}>
             <TouchableOpacity onPress={() => {}} style={styles.button}>
               <Text style={styles.standardButtonText}>INSCRIPTION</Text>

@@ -6,6 +6,7 @@ import {
   TextInput,
   View,
   ScrollView,
+  Image
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -21,7 +22,6 @@ const LoginScreen = () => {
             <Text style={styles.welcome}>Bienvenue,</Text>
             <Text style={styles.title}>Se connecter ou s'inscrire</Text>
           </View>
-          <View></View>
           <View style={styles.inputContainer}>
             <Text style={styles.email}>Email</Text>
             <View style={styles.underline}>
@@ -53,6 +53,7 @@ const LoginScreen = () => {
         <Text style={styles.or}>-OU-</Text>
         <View style={[styles.buttonContainer, styles.networkConnexionBtn]}>
           <TouchableOpacity onPress={() => {}} style={styles.button}>
+            <Image style={styles.iconBtn} source={require("../assets/facebook.png")}></Image>
             <Text style={styles.networkButtonText}>
               Se connecter avec Facebook
             </Text>
@@ -60,6 +61,7 @@ const LoginScreen = () => {
         </View>
         <View style={[styles.buttonContainer, styles.networkConnexionBtn]}>
           <TouchableOpacity onPress={() => {}} style={styles.button}>
+          <Image style={styles.iconBtn} source={require("../assets/google.png")}></Image>
             <Text style={styles.networkButtonText}>
               Se connecter avec Google
             </Text>
@@ -85,9 +87,11 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     marginBottom: 10,
+    fontFamily: "SFProDisplayBold"
   },
   title: {
     color: "gray",
+    fontFamily: "SFProDisplayBold"
   },
   underline: {
     borderBottomWidth: 2,
@@ -120,6 +124,8 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 10,
     alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "center"
   },
   standardButtonText: {
     color: "white",
@@ -158,8 +164,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     borderWidth: 2,
-    borderColor: "grey",
+    borderColor: "#DDDDDD",
     borderRadius: 5,
+    width: 344,
   },
 
   connexion: {
@@ -167,4 +174,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 50,
   },
+
+  iconBtn: {
+    width: 20,
+    height: 20,
+    marginRight: 10
+  }
 });
