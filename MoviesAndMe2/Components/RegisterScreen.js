@@ -9,7 +9,8 @@ import {
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const LoginScreen = () => {
+const RegisterScreen = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,12 +19,20 @@ const LoginScreen = () => {
       <ScrollView style={styles.connexion}>
         <View style={styles.standardConnexion}>
           <View style={styles.headContainer}>
-            <Text style={styles.welcome}>Bienvenue,</Text>
-            <Text style={styles.title}>Se connecter ou s'inscrire</Text>
+            <Text style={styles.welcome}>S'inscrire</Text>
           </View>
           <View></View>
           <View style={styles.inputContainer}>
-            <Text style={styles.email}>Email</Text>
+            <Text style={styles.inputText}>Nom et prénom</Text>
+            <View style={styles.underline}>
+              <TextInput
+              value={name}
+              onChangeText={(text) => setName(text)}
+              style={styles.input}
+            />
+            </View>
+            
+            <Text style={styles.inputText}>Email</Text>
             <View style={styles.underline}>
               <TextInput
                 value={email}
@@ -31,7 +40,8 @@ const LoginScreen = () => {
                 style={styles.input}
               />
             </View>
-            <Text style={styles.password}>Mot de passe</Text>
+
+            <Text style={styles.inputText}>Mot de passe</Text>
             <View style={styles.underline}>
               <TextInput
                 value={password}
@@ -42,35 +52,18 @@ const LoginScreen = () => {
             </View>
           </View>
 
-          <Text style={styles.passwordForgotten}>Mot de passe oublié</Text>
-
           <View style={[styles.buttonContainer, styles.standardConnexionBtn]}>
             <TouchableOpacity onPress={() => {}} style={styles.button}>
-              <Text style={styles.standardButtonText}>SE CONNECTER</Text>
+              <Text style={styles.standardButtonText}>INSCRIPTION</Text>
             </TouchableOpacity>
           </View>
-        </View>
-        <Text style={styles.or}>-OU-</Text>
-        <View style={[styles.buttonContainer, styles.networkConnexionBtn]}>
-          <TouchableOpacity onPress={() => {}} style={styles.button}>
-            <Text style={styles.networkButtonText}>
-              Se connecter avec Facebook
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View style={[styles.buttonContainer, styles.networkConnexionBtn]}>
-          <TouchableOpacity onPress={() => {}} style={styles.button}>
-            <Text style={styles.networkButtonText}>
-              Se connecter avec Google
-            </Text>
-          </TouchableOpacity>
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
   );
 };
 
-export default LoginScreen;
+export default RegisterScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -89,25 +82,16 @@ const styles = StyleSheet.create({
   title: {
     color: "gray",
   },
-  underline: {
-    borderBottomWidth: 2,
-    borderBottomColor: "#DDDDDD",
-  },
   inputContainer: {
     width: "80%",
     marginLeft: 10,
   },
-  email: {
-    color: "gray",
-    marginTop: 20,
-  },
-  password: {
+  inputText: {
     color: "gray",
     marginTop: 20,
   },
   input: {
     marginTop: 10,
-    borderBottomColor: "grey",
   },
   buttonContainer: {
     justifyContent: "center",
@@ -166,5 +150,9 @@ const styles = StyleSheet.create({
     width: 344,
     alignSelf: "center",
     marginTop: 50,
+  },
+  underline: {
+    borderBottomWidth: 2,
+    borderBottomColor: "#DDDDDD",
   },
 });

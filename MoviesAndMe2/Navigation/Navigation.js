@@ -9,6 +9,7 @@ import FilmDetail from "../Components/FilmDetail";
 import Favorites from "../Components/Favorites";
 import Test from "../Components/Test";
 import LoginScreen from "../Components/LoginScreen";
+import RegisterScreen from "../Components/RegisterScreen"
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -52,6 +53,19 @@ function LoginStackNavigator() {
   );
 }
 
+function RegisterStackNavigator() {
+  return (
+  <Stack.Navigator>
+      <Stack.Screen
+        name="Register"
+        component={RegisterScreen}
+        options={{title:"Register"}}
+        ></Stack.Screen>
+      <Stack.Screen name="Reg" component={RegisterScreen} />
+  </Stack.Navigator>
+  );
+}
+
 export default function MoviesTabNavigator() {
   return (
     <NavigationContainer>
@@ -65,6 +79,23 @@ export default function MoviesTabNavigator() {
       <Tab.Screen
         name="Login"
         component={LoginStackNavigator}
+        options={{
+          headerShown: false,
+          // On définit le rendu de nos icônes par les images récemment ajoutés au projet
+          tabBarIcon: () => {
+            return (
+              <Image
+                source={require("../Images/ic_favorite.png")}
+                // On applique un style pour les redimensionner comme il faut
+                style={styles.icon}
+              />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Register"
+        component={RegisterStackNavigator}
         options={{
           headerShown: false,
           // On définit le rendu de nos icônes par les images récemment ajoutés au projet
