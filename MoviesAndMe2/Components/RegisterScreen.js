@@ -6,8 +6,10 @@ import {
   TextInput,
   View,
   ScrollView,
+  Image,
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import Back from "./Back";
 
 const RegisterScreen = () => {
   const [name, setName] = useState("");
@@ -16,12 +18,12 @@ const RegisterScreen = () => {
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior="padding">
+        <View style={styles.backButton}>
+          <TouchableOpacity onPress={() => {}}>
+            <Back color="black"></Back>
+          </TouchableOpacity>
+        </View>
       <ScrollView style={styles.connexion}>
-      <View style={[styles.buttonContainer, styles.standardConnexionBtn]}>
-            <TouchableOpacity onPress={() => {}} style={styles.button}>
-              <Text style={styles.standardButtonText}>INSCRIPTION</Text>
-            </TouchableOpacity>
-          </View>
         <View style={styles.standardConnexion}>
           <View style={styles.headContainer}>
             <Text style={styles.welcome}>S'inscrire</Text>
@@ -29,10 +31,7 @@ const RegisterScreen = () => {
           <View style={styles.inputContainer}>
             <Text style={styles.inputText}>Nom et prénom</Text>
             <View style={styles.input}>
-              <TextInput
-              value={name}
-              onChangeText={(text) => setName(text)}
-            />
+              <TextInput value={name} onChangeText={(text) => setName(text)} />
             </View>
             <Text style={styles.inputText}>Email</Text>
             <View style={styles.input}>
@@ -90,7 +89,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderBottomWidth: 2,
     borderBottomColor: "#DDDDDD",
-    marginBottom: 20
+    marginBottom: 20,
   },
   buttonContainer: {
     justifyContent: "center",
@@ -148,6 +147,13 @@ const styles = StyleSheet.create({
   connexion: {
     width: 344,
     alignSelf: "center",
-    marginTop: 50,
+    marginTop: 10,
   },
+
+  backButton: {
+    width: 344,
+    alignSelf: "center",
+    marginTop: 10,
+    marginBottom: 10
+  }
 });
