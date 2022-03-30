@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
   },
   email: {
     color: "gray",
-    marginTop: 20,
   },
   password: {
     color: "gray",

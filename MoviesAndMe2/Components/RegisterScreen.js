@@ -17,33 +17,35 @@ const RegisterScreen = () => {
   return (
     <KeyboardAvoidingView style={styles.container} behavior="padding">
       <ScrollView style={styles.connexion}>
+      <View style={[styles.buttonContainer, styles.standardConnexionBtn]}>
+            <TouchableOpacity onPress={() => {}} style={styles.button}>
+              <Text style={styles.standardButtonText}>INSCRIPTION</Text>
+            </TouchableOpacity>
+          </View>
         <View style={styles.standardConnexion}>
           <View style={styles.headContainer}>
             <Text style={styles.welcome}>S'inscrire</Text>
           </View>
           <View style={styles.inputContainer}>
             <Text style={styles.inputText}>Nom et prénom</Text>
-            <View style={styles.underline}>
+            <View style={styles.input}>
               <TextInput
               value={name}
               onChangeText={(text) => setName(text)}
-              style={styles.input}
             />
             </View>
             <Text style={styles.inputText}>Email</Text>
-            <View style={styles.underline}>
+            <View style={styles.input}>
               <TextInput
                 value={email}
                 onChangeText={(text) => setEmail(text)}
-                style={styles.input}
               />
             </View>
             <Text style={styles.inputText}>Mot de passe</Text>
-            <View style={styles.underline}>
+            <View style={styles.input}>
               <TextInput
                 value={password}
                 onChangeText={(text) => setPassword(text)}
-                style={styles.input}
                 secureTextEntry
               />
             </View>
@@ -73,7 +75,6 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 30,
     fontWeight: "bold",
-    marginBottom: 10,
   },
   title: {
     color: "gray",
@@ -84,10 +85,12 @@ const styles = StyleSheet.create({
   },
   inputText: {
     color: "gray",
-    marginTop: 20,
   },
   input: {
     marginTop: 10,
+    borderBottomWidth: 2,
+    borderBottomColor: "#DDDDDD",
+    marginBottom: 20
   },
   buttonContainer: {
     justifyContent: "center",
@@ -146,9 +149,5 @@ const styles = StyleSheet.create({
     width: 344,
     alignSelf: "center",
     marginTop: 50,
-  },
-  underline: {
-    borderBottomWidth: 2,
-    borderBottomColor: "#DDDDDD",
   },
 });
