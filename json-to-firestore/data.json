@@ -1,0 +1,72 @@
+[
+    {
+    "nom_modele":"Robe Brume",
+    "sexe":"Femme",
+    "categorie_produit":"Robe",
+    "couleur":[
+        "Gris"
+    ],
+    "matiere":"Laine",
+    "pourcentage_matiere":100,
+    "col":"Col rond",
+    "manches":"longues",
+    "prix":220
+    },
+    {
+    "nom_modele":"Pull Drailles",
+    "sexe":"Femme",
+    "categorie_produit":"Pull & Sweat",
+    "type_produit":"Pull",
+    "couleur":[
+        "Gris"
+    ],
+    "matiere":"Laine",
+    "pourcentage_matiere":100,
+    "col":"Col rond",
+    "manches":"Sans manches",
+    "prix":140
+    },
+    {
+    "nom_modele":"Pull Talweg",
+    "sexe":"Unisexe",
+    "categorie_produit":"Pull & Sweat",
+    "type_produit":"Pull",
+    "couleur":[
+        "Beige"
+    ],
+    "matiere":"Laine",
+    "pourcentage_matiere":100,
+    "col":"Col v",
+    "manches":"Manches longues",
+    "prix":180
+    },
+    {
+    "nom_modele":"Pull Eclisse",
+    "sexe":"Unisexe",
+    "categorie_produit":"Pull & Sweat",
+    "type_produit":"Pull",
+    "couleur":[
+        "Blanc cassé"
+    ],
+    "matiere":"Laine",
+    "pourcentage_matiere":100,
+    "col":"Col rond",
+    "manches":"Manches longues",
+    "prix":190
+    },
+    {
+    "nom_modele":"Cardigan Belthane",
+    "sexe":"Femme",
+    "categorie_produit":"Pull & Sweat",
+    "type_produit":"Cardigan",
+    "couleur":[
+        "Gris","Beige"
+    ],
+    "matiere":"Laine",
+    "pourcentage_matiere":100,
+    "manches":"Manches longues",
+    "prix":180
+    }
+    
+    
+]
