@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import facebookIcon from "../images/icons/facebook.png";
+import googleIcon from "../images/icons/google.png";
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -23,10 +25,11 @@ import {
   Google,
   Twitter,
   CategoryCheck,
-} from "../../components";
-import { COLORS, SIZES, FONTS, ANDROIDSAFEAREAVIEW } from "../../constants";
+} from "../components";
 
-const Login = () => {
+import { COLORS, SIZES, FONTS, ANDROIDSAFEAREAVIEW } from "../constants";
+
+export function LoginForm (){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
@@ -89,7 +92,7 @@ const Login = () => {
             <TouchableOpacity onPress={() => {}} style={styles.button}>
               <Image
                 style={styles.iconBtn}
-                source={require("../images/icon/facebook.png")}
+                source={facebookIcon}
               ></Image>
               <Text style={styles.networkButtonText}>
                 Se connecter avec Facebook
@@ -100,7 +103,7 @@ const Login = () => {
             <TouchableOpacity onPress={() => {}} style={styles.button}>
               <Image
                 style={styles.iconBtn}
-                source={require("../images/icon/google.png")}
+                source={googleIcon}
               ></Image>
               <Text style={styles.networkButtonText}>
                 Se connecter avec Google
@@ -216,14 +219,15 @@ const Login = () => {
       height: 20,
       marginRight: 10,
     },
-  });
+  })
+  
   return (
     <SafeAreaView style={{ ...ANDROIDSAFEAREAVIEW.AndroidSafeArea }}>
       {renderHeader()}
       {renderContent()}
     </SafeAreaView>
-  );
+  )
 }
 
 
-export default Login;
+export default LoginForm;

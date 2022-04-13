@@ -5,9 +5,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import FlashMessage from "react-native-flash-message";
 import firebase from "firebase/app";
 import "firebase/auth";
+import LoginForm from "./src/screens/LoginForm"
 import {
   OnBoarding,
-  Login,
   SignIn,
   MainLayout,
   SignUp,
@@ -95,7 +95,7 @@ export default function App() {
           initialRouteName="OnBoarding"
         >
           <Stack.Screen name="OnBoarding" component={OnBoarding} />
-          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="LoginForm" component={LoginForm} />
           <Stack.Screen name="SignIn" component={SignIn} />
           <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen name="AddNewAddress" component={AddNewAddress} />
