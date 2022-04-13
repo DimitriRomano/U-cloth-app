@@ -147,7 +147,7 @@ export default function OnBoarding() {
                     marginBottom: 30,
                     marginTop: 400,
                   }}
-                  onPress={() => navigation.navigate("SignIn")}
+                  onPress={() => navigation.navigate("Login")}
                 >
                   <Text
                     style={{
