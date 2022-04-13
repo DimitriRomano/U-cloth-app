@@ -7,6 +7,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import {
   OnBoarding,
+  Login,
   SignIn,
   MainLayout,
   SignUp,
@@ -94,7 +95,7 @@ export default function App() {
           initialRouteName="OnBoarding"
         >
           <Stack.Screen name="OnBoarding" component={OnBoarding} />
-          {/* <Stack.Screen name="Login" component={Login} /> */}
+          <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="SignIn" component={SignIn} />
           <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen name="AddNewAddress" component={AddNewAddress} />

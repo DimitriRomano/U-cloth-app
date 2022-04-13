@@ -7,11 +7,26 @@ import {
   View,
   ScrollView,
   Image,
+  SafeAreaView,
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
+import {
+  TopNav,
+  Line,
+  InputField,
+  Check,
+  EyeOff,
+  EyeOn,
+  Button,
+  Facebook,
+  Google,
+  Twitter,
+  CategoryCheck,
+} from "../../components";
+import { COLORS, SIZES, FONTS, ANDROIDSAFEAREAVIEW } from "../../constants";
 
-export default function Login() {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
@@ -96,6 +111,112 @@ export default function Login() {
       </KeyboardAvoidingView>
     );
   }
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    headContainer: {
+      marginTop: 10,
+      marginBottom: 48,
+      marginLeft: 5,
+    },
+    welcome: {
+      fontSize: 30,
+      fontWeight: "bold",
+      marginBottom: 10,
+      fontFamily: "SFProDisplayBold",
+    },
+    title: {
+      color: "gray",
+      fontFamily: "SFProDisplayBold",
+    },
+    underline: {
+      borderBottomWidth: 2,
+      borderBottomColor: "#DDDDDD",
+    },
+    inputContainer: {
+      width: "80%",
+      marginLeft: 10,
+    },
+    email: {
+      color: "gray",
+    },
+    password: {
+      color: "gray",
+      marginTop: 20,
+    },
+    input: {
+      marginTop: 10,
+      borderBottomColor: "grey",
+    },
+    buttonContainer: {
+      justifyContent: "center",
+      alignSelf: "center",
+      width: 311,
+      borderRadius: 3,
+    },
+    button: {
+      width: "100%",
+      padding: 15,
+      borderRadius: 10,
+      alignItems: "center",
+      flexDirection: "row",
+      justifyContent: "center",
+    },
+    standardButtonText: {
+      color: "white",
+      fontSize: 14,
+    },
+    networkButtonText: {
+      color: "black",
+      fontSize: 14,
+    },
+    or: {
+      alignSelf: "center",
+      fontSize: 20,
+      marginTop: 20,
+      marginBottom: 20,
+    },
+    passwordForgotten: {
+      textAlign: "right",
+      marginTop: 48,
+      marginRight: 10,
+    },
+  
+    standardConnexion: {
+      backgroundColor: "white",
+    },
+  
+    standardConnexionBtn: {
+      marginTop: 20,
+      marginBottom: 20,
+      backgroundColor: "#00B3EB",
+    },
+  
+    networkConnexionBtn: {
+      marginTop: 10,
+      marginBottom: 10,
+      color: "black",
+      marginTop: 10,
+      marginBottom: 10,
+      borderWidth: 2,
+      borderColor: "#DDDDDD",
+      borderRadius: 5,
+      width: 344,
+    },
+  
+    connexion: {
+      width: 344,
+      alignSelf: "center",
+      marginTop: 50,
+    },
+  
+    iconBtn: {
+      width: 20,
+      height: 20,
+      marginRight: 10,
+    },
+  });
   return (
     <SafeAreaView style={{ ...ANDROIDSAFEAREAVIEW.AndroidSafeArea }}>
       {renderHeader()}
@@ -103,109 +224,6 @@ export default function Login() {
     </SafeAreaView>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  headContainer: {
-    marginTop: 10,
-    marginBottom: 48,
-    marginLeft: 5,
-  },
-  welcome: {
-    fontSize: 30,
-    fontWeight: "bold",
-    marginBottom: 10,
-    fontFamily: "SFProDisplayBold",
-  },
-  title: {
-    color: "gray",
-    fontFamily: "SFProDisplayBold",
-  },
-  underline: {
-    borderBottomWidth: 2,
-    borderBottomColor: "#DDDDDD",
-  },
-  inputContainer: {
-    width: "80%",
-    marginLeft: 10,
-  },
-  email: {
-    color: "gray",
-  },
-  password: {
-    color: "gray",
-    marginTop: 20,
-  },
-  input: {
-    marginTop: 10,
-    borderBottomColor: "grey",
-  },
-  buttonContainer: {
-    justifyContent: "center",
-    alignSelf: "center",
-    width: 311,
-    borderRadius: 3,
-  },
-  button: {
-    width: "100%",
-    padding: 15,
-    borderRadius: 10,
-    alignItems: "center",
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-  standardButtonText: {
-    color: "white",
-    fontSize: 14,
-  },
-  networkButtonText: {
-    color: "black",
-    fontSize: 14,
-  },
-  or: {
-    alignSelf: "center",
-    fontSize: 20,
-    marginTop: 20,
-    marginBottom: 20,
-  },
-  passwordForgotten: {
-    textAlign: "right",
-    marginTop: 48,
-    marginRight: 10,
-  },
 
-  standardConnexion: {
-    backgroundColor: "white",
-  },
 
-  standardConnexionBtn: {
-    marginTop: 20,
-    marginBottom: 20,
-    backgroundColor: "#00B3EB",
-  },
-
-  networkConnexionBtn: {
-    marginTop: 10,
-    marginBottom: 10,
-    color: "black",
-    marginTop: 10,
-    marginBottom: 10,
-    borderWidth: 2,
-    borderColor: "#DDDDDD",
-    borderRadius: 5,
-    width: 344,
-  },
-
-  connexion: {
-    width: 344,
-    alignSelf: "center",
-    marginTop: 50,
-  },
-
-  iconBtn: {
-    width: 20,
-    height: 20,
-    marginRight: 10,
-  },
-});
+export default Login;
