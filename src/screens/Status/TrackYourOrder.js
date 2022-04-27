@@ -54,7 +54,8 @@ export default function TrackYourOrder() {
     return (
       <View style={{ flexDirection: "row", marginTop: 5 }}>
         <TopNav back={true} backOnPress={() => navigation.goBack()} />
-        <Text style={{ marginLeft: 110, ...FONTS.H2, marginTop: 12 }}>
+        <Text style={{ marginLeft: 110, ...FONTS.H2, marginTop: 12
+         }}>
           Produits
         </Text>
         <Image

@@ -166,6 +166,7 @@ export function RegisterScreen() {
 
     standardConnexionBtn: {
       marginTop: 20,
+      width: "100%",
       marginBottom: 20,
       backgroundColor: "#00B3EB",
     },
@@ -182,7 +183,7 @@ export function RegisterScreen() {
     },
 
     connexion: {
-      marginTop: 50,
+      marginTop: "5%",
     },
   });
 

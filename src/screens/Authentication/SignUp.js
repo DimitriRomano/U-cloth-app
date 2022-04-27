@@ -50,7 +50,6 @@ export default function SignIn({ navigation }) {
           }}
           showsVerticalScrollIndicator={false}
         >
-          {/* <Line containerStyle={{ marginBottom: 14 }} /> */}
           <View
             style={{
               backgroundColor: "#F0F8FF",
@@ -119,27 +118,6 @@ export default function SignIn({ navigation }) {
               }
               secureTextEntry={passVissibleOne == true ? false : true}
             />
-            {/* <InputField
-            text="confirm password"
-            placeholder="••••••••"
-            containerStyle={{ marginBottom: 20 }}
-            icon={
-              <TouchableOpacity
-                style={{
-                  paddingHorizontal: 30,
-                  height: "100%",
-                  justifyContent: "center",
-                }}
-                onPress={() => {
-                  setPassVissibleTwo((passVissibleTwo) => !passVissibleTwo);
-                }}
-              >
-                {passVissibleTwo == true ? <EyeOn /> : <EyeOff />}
-              </TouchableOpacity>
-            }
-            secureTextEntry={passVissibleTwo == true ? false : true}
-          /> */}
-
             <TouchableOpacity
               style={{
                 width: 255,
@@ -164,66 +142,9 @@ export default function SignIn({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            {/* <Button
-              text="Inscription"
-              containerStyle={{ marginBottom: 20 }}
-              onPress={() => navigation.navigate("VerifyNumber")}
-            /> */}
+           
           </View>
-          {/* <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              marginBottom: 60,
-            }}
-          >
-            <Text
-              style={{
-                fontFamily: "Mulish_400Regular",
-                fontSize: 16,
-                color: COLORS.gray,
-                marginRight: 3,
-              }}
-            >
-              J'ai déjà un compte?
-            </Text>
-            <TouchableOpacity onPress={() => navigation.navigate("SignIn")}>
-              <Text
-                style={{
-                  fontFamily: "Mulish_400Regular",
-                  fontSize: 16,
-                  color: COLORS.black,
-                }}
-              >
-                Sign in.
-              </Text>
-            </TouchableOpacity>
-          </View> */}
-          {/* <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-            }}
-          >
-            <TouchableOpacity
-              style={{ marginHorizontal: 7 }}
-              onPress={() => console.log("Facebook")}
-            >
-              <Facebook />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{ marginHorizontal: 7 }}
-              onPress={() => console.log("Twitter")}
-            >
-              <Twitter />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{ marginHorizontal: 7 }}
-              onPress={() => console.log("Google")}
-            >
-              <Google />
-            </TouchableOpacity>
-          </View> */}
+          
         </ScrollView>
       </KeyboardAvoidingView>
     );

@@ -39,7 +39,7 @@ export default function ProfileCategory({
         {icon}
       </View>
       <Text style={{ flex: 1, ...FONTS.H5, color: COLORS.black }}>{text}</Text>
-      {/* {sale && (
+      {sale && (
         <View
           style={{
             position: "absolute",
@@ -62,7 +62,7 @@ export default function ProfileCategory({
             Nouveau
           </Text>
         </View>
-      )} */}
+      )}
       {rightIcon && (
         <Arrow fillColor={COLORS.black} strokeColor={COLORS.black} />
       )}

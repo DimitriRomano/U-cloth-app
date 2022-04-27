@@ -54,7 +54,7 @@ export default function SignIn() {
           }}
           showsVerticalScrollIndicator={false}
         >
-          {/* <Line containerStyle={{ marginBottom: 14 }} /> */}
+        
           <View
             style={{
               backgroundColor: "#F0F8FF",
@@ -71,15 +71,7 @@ export default function SignIn() {
             >
               Bienvenue!
             </Text>
-            {/* <Text
-            style={{
-              textAlign: "center",
-              marginBottom: 45,
-              color: COLORS.gray,
-              fontFamily: "Mulish_400Regular",
-              fontSize: 16,
-            }}
-          ></Text> */}
+       
 
             <View style={{ marginTop: 10 }}>
               <InputField

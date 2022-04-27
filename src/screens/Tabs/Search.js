@@ -12,14 +12,8 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   TopNav,
-  MenuModal,
   Heart,
-  Bag,
-  Rating,
-  Heading,
-  Twitter,
-  Filter,
-  Google,
+
 } from "../../components";
 import { ANDROIDSAFEAREAVIEW, COLORS, FONTS, SIZES } from "../../constants";
 
