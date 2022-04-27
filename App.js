@@ -6,6 +6,7 @@ import FlashMessage from "react-native-flash-message";
 import firebase from "firebase/app";
 import "firebase/auth";
 import LoginForm from "./src/screens/LoginForm"
+import RegisterScreen from "./src/screens/RegisterScreen";
 import {
   OnBoarding,
   SignIn,
@@ -96,6 +97,7 @@ export default function App() {
         >
           <Stack.Screen name="OnBoarding" component={OnBoarding} />
           <Stack.Screen name="LoginForm" component={LoginForm} />
+          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
           <Stack.Screen name="SignIn" component={SignIn} />
           <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen name="AddNewAddress" component={AddNewAddress} />

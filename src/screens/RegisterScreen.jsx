@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import facebookIcon from "../images/icons/facebook.png";
-import googleIcon from "../images/icons/google.png";
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -11,8 +9,6 @@ import {
   Image,
   SafeAreaView,
 } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { useNavigation } from "@react-navigation/native";
 import {
   TopNav,
   Line,
@@ -26,93 +22,69 @@ import {
   Twitter,
   CategoryCheck,
 } from "../components";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
 
 import { COLORS, SIZES, FONTS, ANDROIDSAFEAREAVIEW } from "../constants";
 
-export function LoginForm() {
+export function RegisterScreen() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
 
-  // const [passVissible, setPassVissible] = useState(false);
-  // const [rememberMe, setRememberMe] = useState(false);
-
-  // function renderHeader() {
-  //   return (
-  //     <TopNav
-  //       navigation={true}
-  //       backOnPress={() => navigation.goBack()}
-  //       back={true}
-  //     />
-  //   );
-  // }
-
+  function renderHeader() {
+    return (
+      <TopNav
+        navigation={true}
+        backOnPress={() => navigation.goBack()}
+        back={true}
+      />
+    );
+  }
   function renderContent() {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <ScrollView style={styles.connexion}>
           <View style={styles.standardConnexion}>
             <View style={styles.headContainer}>
-              <Text style={styles.welcome}>Bienvenue,</Text>
-              <Text
-                style={styles.title}
-                onPress={() => navigation.navigate("RegisterScreen")}
-              >
-                S'inscrire, par ici.
-              </Text>
+              <Text style={styles.welcome}>S'inscrire</Text>
             </View>
             <View style={styles.inputContainer}>
-              <Text style={styles.email}>Email</Text>
-              <View style={styles.underline}>
+              <Text style={styles.inputText}>Nom et prénom</Text>
+              <View style={styles.input}>
+                <TextInput
+                  value={name}
+                  onChangeText={(text) => setName(text)}
+                />
+              </View>
+              <Text style={styles.inputText}>Email</Text>
+              <View style={styles.input}>
                 <TextInput
                   value={email}
                   onChangeText={(text) => setEmail(text)}
-                  style={styles.input}
                 />
               </View>
-              <Text style={styles.password}>Mot de passe</Text>
-              <View style={styles.underline}>
+              <Text style={styles.inputText}>Mot de passe</Text>
+              <View style={styles.input}>
                 <TextInput
                   value={password}
                   onChangeText={(text) => setPassword(text)}
-                  style={styles.input}
                   secureTextEntry
                 />
               </View>
             </View>
-
-            <Text style={styles.passwordForgotten}>Mot de passe oublié</Text>
-
             <View style={[styles.buttonContainer, styles.standardConnexionBtn]}>
-              <TouchableOpacity
-                onPress={() => navigation.navigate("MainLayout")}
-                style={styles.button}
-              >
-                <Text style={styles.standardButtonText}>SE CONNECTER</Text>
+              <TouchableOpacity onPress={() => {}} style={styles.button}>
+                <Text style={styles.standardButtonText}>INSCRIPTION</Text>
               </TouchableOpacity>
             </View>
-          </View>
-          <Text style={styles.or}>-OU-</Text>
-          <View style={[styles.buttonContainer, styles.networkConnexionBtn]}>
-            <TouchableOpacity onPress={() => {}} style={styles.button}>
-              <Image style={styles.iconBtn} source={facebookIcon}></Image>
-              <Text style={styles.networkButtonText}>
-                Se connecter avec Facebook
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={[styles.buttonContainer, styles.networkConnexionBtn]}>
-            <TouchableOpacity onPress={() => {}} style={styles.button}>
-              <Image style={styles.iconBtn} source={googleIcon}></Image>
-              <Text style={styles.networkButtonText}>
-                Se connecter avec Google
-              </Text>
-            </TouchableOpacity>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
     );
   }
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -125,34 +97,27 @@ export function LoginForm() {
     welcome: {
       fontSize: 30,
       fontWeight: "bold",
-      marginBottom: 10,
-      fontFamily: "SFProDisplayBold",
     },
     title: {
-      color: "#06B3EB",
-      fontFamily: "SFProDisplayBold",
-    },
-    underline: {
-      borderBottomWidth: 2,
-      borderBottomColor: "#DDDDDD",
+      color: "gray",
     },
     inputContainer: {
-      width: "100%",
+      width: "80%",
+      marginLeft: 10,
     },
-    email: {
+    inputText: {
       color: "gray",
-    },
-    password: {
-      color: "gray",
-      marginTop: 20,
     },
     input: {
       marginTop: 10,
-      borderBottomColor: "grey",
+      borderBottomWidth: 2,
+      borderBottomColor: "#DDDDDD",
+      marginBottom: 20,
     },
     buttonContainer: {
       justifyContent: "center",
       alignSelf: "center",
+      width: 311,
       borderRadius: 3,
     },
     button: {
@@ -160,8 +125,6 @@ export function LoginForm() {
       padding: 15,
       borderRadius: 10,
       alignItems: "center",
-      flexDirection: "row",
-      justifyContent: "center",
     },
     standardButtonText: {
       color: "white",
@@ -174,12 +137,12 @@ export function LoginForm() {
     or: {
       alignSelf: "center",
       fontSize: 20,
-      marginTop: 10,
-      marginBottom: 10,
+      marginTop: 20,
+      marginBottom: 20,
     },
     passwordForgotten: {
       textAlign: "right",
-      marginTop: 10,
+      marginTop: 48,
       marginRight: 10,
     },
 
@@ -192,19 +155,19 @@ export function LoginForm() {
         width: 0,
         height: 1,
       },
-      shadowOpacity: 0.10,
+      shadowOpacity: 0.5,
       shadowRadius: 3.84,
 
       elevation: 5,
 
-      padding : 10
+      padding: 10,
+      marginBottom: 5
     },
 
     standardConnexionBtn: {
       marginTop: 20,
       marginBottom: 20,
       backgroundColor: "#00B3EB",
-      width: "100%",
     },
 
     networkConnexionBtn: {
@@ -214,28 +177,21 @@ export function LoginForm() {
       marginTop: 10,
       marginBottom: 10,
       borderWidth: 2,
-      borderColor: "#DDDDDD",
+      borderColor: "grey",
       borderRadius: 5,
-      width: 344,
     },
 
     connexion: {
-      marginTop: 40,
-    },
-
-    iconBtn: {
-      width: 20,
-      height: 20,
-      marginRight: 10,
+      marginTop: 50,
     },
   });
 
   return (
     <SafeAreaView style={{ ...ANDROIDSAFEAREAVIEW.AndroidSafeArea }}>
-      {/* {renderHeader()} */}
+      {renderHeader()}
       {renderContent()}
     </SafeAreaView>
   );
 }
 
-export default LoginForm;
+export default RegisterScreen;
