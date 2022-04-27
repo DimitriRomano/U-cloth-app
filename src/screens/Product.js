@@ -144,11 +144,22 @@ export default function Product() {
     return (
       <View>
         <View>
-          <View>
-            <Image
+          <View style={{ flex: 1 }}>
+            <ImageBackground
               source={require("../images/products/pull.jpg")}
-              style={{ width: SIZES.width, height: 200 }}
-            ></Image>
+              resizeMode="cover"
+              style={{
+                flex: 1,
+                justifyContent: "center",
+                with: "100%",
+                height: 150,
+              }}
+            >
+              <TopNav
+                back={true}
+                backOnPress={() => navigation.goBack()}
+              ></TopNav>
+            </ImageBackground>
           </View>
         </View>
         <View style={{ marginTop: 30, paddingHorizontal: 20 }}>

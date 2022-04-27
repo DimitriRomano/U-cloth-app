@@ -8,6 +8,7 @@ import {
   Image,
   ImageBackground,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   TopNav,
@@ -94,7 +95,7 @@ const CLOTHING_CATEGORIES = [
     discount: "50% off",
     rating: "3.0",
     sale: true,
-    like: true,
+    like: false,
     image: require("../../images/categories/robe.jpg"),
   },
   {
@@ -113,17 +114,17 @@ const CLOTHING_CATEGORIES = [
 
 export default function Search() {
   const [category, setCategory] = useState(0);
-
+  const navigation = useNavigation();
   function renderHeader() {
     return (
       <View style={{ flexDirection: "row" }}>
-        <TopNav back={true} />
-        <Text style={{ marginLeft: 120, ...FONTS.H2, marginTop: 10 }}>
+        <TopNav back={true} backOnPress={() => navigation.goBack()} />
+        <Text style={{ marginLeft: 115, ...FONTS.H2, marginTop: 10 }}>
           Marque
         </Text>
         <Image
           source={require("../../images/logos/utilisateur.png")}
-          style={{ width: 40, height: 40, marginLeft: 60, marginTop: 0 }}
+          style={{ width: 35, height: 35, marginLeft: 60, marginTop: 10 }}
         ></Image>
       </View>
     );
@@ -215,7 +216,6 @@ export default function Search() {
                         }
                       />
                     </TouchableOpacity>
-                 
                   </View>
                   {item.sale && (
                     <View
@@ -242,7 +242,7 @@ export default function Search() {
                     </View>
                   )}
                 </TouchableOpacity>
-             
+
                 <Text
                   style={{
                     fontFamily: "Mulish_400Regular",
@@ -290,7 +290,7 @@ export default function Search() {
                         ...FONTS.Mulish_600SemiBold,
                         fontSize: 14,
                         lineHeight: 14 * 1.5,
-                        color: COLORS.carrot,
+                        color: COLORS.bleu,
                       }}
                     >
                       ${item.price}

@@ -152,7 +152,7 @@ export default function AddNewCard({ navigation }) {
             />
           </View>
           <Button
-            text="save card"
+            text="AJouter"
             onPress={() => navigation.navigate("PaymentMethod")}
           />
         </ScrollView>

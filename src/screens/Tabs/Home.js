@@ -249,8 +249,8 @@ export default function Home() {
               <Image
                 source={require("../../images/icons/shirt.png")}
                 style={{
-                  width: 38,
-                  height: 38,
+                  width: 30,
+                  height: 30,
                   backgroundColor: COLORS.white,
                 }}
               ></Image>
@@ -277,7 +277,7 @@ export default function Home() {
           >
             <Image
               source={require("../../images/icons/talons-hauts.png")}
-              style={{ width: 38, height: 36, marginLeft: 3 }}
+              style={{ width: 36, height: 34, marginLeft: 3 }}
             ></Image>
             <Text style={{ marginLeft: 9 }}>M2</Text>
           </View>

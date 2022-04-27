@@ -10,7 +10,7 @@ const COMMENTS = [
   {
     id: "1",
     name: "Mohamed Chehem",
-    photo: require("../images/icons/02.png"),
+    photo: require("../images/icons/06.jpg"),
     date: "23 Jan 2022",
     comment: "je suis satisfait de la date de livraison",
     rating: 3,
@@ -18,7 +18,7 @@ const COMMENTS = [
   {
     id: "2",
     name: "Iba Watta",
-    photo: require("../images/icons/03.png"),
+    photo: require("../images/icons/07.jpg"),
     date: "23 Jan 2022",
     comment:
       "Toute l’équipe, et notamment l’équipe travaux, vous remercie infiniment pour votre retour. Votre maison a déjà bien avancé. Nous sommes heureux que vous puissiez vivre votre projet pleinement et sans surprise. Nous avons hâte de découvrir vos prochains retours. Ce sont des moments de reconnaissance importants pour nous",
@@ -27,7 +27,7 @@ const COMMENTS = [
   {
     id: "3",
     name: "Aden Houmed",
-    photo: require("../images/icons/04.png"),
+    photo: require("../images/icons/07.jpg"),
     date: "23 Jan 2022",
     comment: "Le respect des délais et même avec 48 h d'avance...bravo !",
     rating: 3,
@@ -35,7 +35,7 @@ const COMMENTS = [
   {
     id: "4",
     name: "Zeinaba Chehem",
-    photo: require("../images/icons/05.png"),
+    photo: require("../images/icons/06.jpg"),
     date: "23 Jan 2022",
     comment: "PARFAIT ET UN PRIX DEFIANT TOUTE CONCURRENCE",
     rating: 3,
@@ -104,10 +104,11 @@ export default function Reviews() {
                 <Text
                   style={{
                     ...FONTS.Mulish_400Regular,
-                    fontSize: 10,
-                    color: COLORS.gray,
+                    fontSize: 11,
+                    color: COLORS.black,
                     lineHeight: 10 * 1.5,
                     marginBottom: 10,
+                    fontWeight: "bold",
                   }}
                 >
                   {item.date}

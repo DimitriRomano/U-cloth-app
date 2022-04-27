@@ -18,6 +18,10 @@ import {
   Gift,
   ProfileEdit,
   SignOutModal,
+  InBag,
+  Fail,
+  EyeOff,
+  EyeOn,
 } from "../../components";
 import { useNavigation } from "@react-navigation/native";
 
@@ -83,14 +87,16 @@ export default function Profile() {
                 marginLeft: 10,
               }}
             >
-              <Text style={{ ...FONTS.H4, color: COLORS.black }}>
+              <Text
+                style={{ ...FONTS.H4, color: COLORS.black, fontWeight: "bold" }}
+              >
                 CHEHEM Mohamed
               </Text>
               <Text
                 style={{
                   ...FONTS.Mulish_400Regular,
                   fontSize: 14,
-                  color: COLORS.gray,
+                  color: COLORS.black,
                   lineHeight: 14 * 1.7,
                   marginLeft: 5,
                   marginTop: 5,
@@ -147,17 +153,23 @@ export default function Profile() {
               icon={<MapPin />}
               onPress={() => navigation.navigate("AddNewAddress")}
             />
-            <ProfileCategory
+            {/* <ProfileCategory
               text="Code Promos"
               rightIcon={true}
               icon={<Gift />}
               onPress={() => navigation.navigate("MyPromoCodes")}
-            />
-            <ProfileCategory
+            /> */}
+            {/* <ProfileCategory
               text="Orderhistory"
               rightIcon={true}
               icon={<Gift />}
               onPress={() => navigation.navigate("OrderHistory")}
+            /> */}
+            <ProfileCategory
+              text="Marque"
+              rightIcon={true}
+              icon={<Gift />}
+              onPress={() => navigation.navigate("Search")}
             />
 
             <ProfileCategory
@@ -175,7 +187,7 @@ export default function Profile() {
             <ProfileCategory
               text="Détails Article"
               rightIcon={true}
-              icon={<Gift />}
+              icon={<Calendar />}
               onPress={() => navigation.navigate("Product")}
             />
             <ProfileCategory
@@ -185,9 +197,15 @@ export default function Profile() {
               onPress={() => navigation.navigate("Reviews")}
             />
             <ProfileCategory
-              text="ShippingDetails"
+              text="Marque"
               rightIcon={true}
-              icon={<Gift />}
+              icon={<EyeOn />}
+              onPress={() => navigation.navigate("Search")}
+            />
+            <ProfileCategory
+              text="Détails expédition"
+              rightIcon={true}
+              icon={<MapPin />}
               onPress={() => navigation.navigate("ShippingDetails")}
             />
             <ProfileCategory

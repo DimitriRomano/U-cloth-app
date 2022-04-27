@@ -27,8 +27,7 @@ export default function SignOutModal({
           height: 335,
           backgroundColor: COLORS.transparent,
           borderRadius: 200,
-          borderWidth: 4,
-          borderColor: COLORS.white,
+
           justifyContent: "center",
           alignItems: "center",
           alignSelf: "center",
@@ -44,7 +43,6 @@ export default function SignOutModal({
             alignItems: "center",
           }}
         >
-          {/* <Line /> */}
           <Text
             style={{
               textAlign: "center",
@@ -61,7 +59,7 @@ export default function SignOutModal({
               borderRadius: 50,
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: COLORS.black,
+              backgroundColor: COLORS.bleu,
               marginBottom: 20,
             }}
             onPress={signOut}
