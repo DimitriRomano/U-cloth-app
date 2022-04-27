@@ -33,7 +33,8 @@ import Search from "../screens/Tabs/Search";
 import Order from "../screens/Tabs/Order";
 import Wishlist from "../screens/Tabs/Wishlist";
 import Profile from "../screens/Tabs/Profile";
-
+import LoginForm from "./LoginForm";
+import RegisterScreen from "./RegisterScreen";
 export {
   OnBoarding,
   SignIn,
@@ -44,6 +45,8 @@ export {
   AccountCreated,
   VerifyNumber,
   OtpCode,
+  LoginForm,
+  RegisterScreen,
   Filter,
   MyPromoCodes,
   SelectPayment,

@@ -3,7 +3,8 @@ import { useFonts } from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import FlashMessage from "react-native-flash-message";
-
+import LoginForm from "./src/screens/LoginForm";
+import RegisterScreen from "./src/screens/RegisterScreen";
 import {
   OnBoarding,
   SignIn,
@@ -69,6 +70,8 @@ export default function App() {
           initialRouteName="OnBoarding"
         >
           <Stack.Screen name="OnBoarding" component={OnBoarding} />
+          <Stack.Screen name="LoginForm" component={LoginForm} />
+          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
           <Stack.Screen name="SignIn" component={SignIn} />
           <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen name="AddNewAddress" component={AddNewAddress} />

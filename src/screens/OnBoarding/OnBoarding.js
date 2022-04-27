@@ -10,7 +10,6 @@ import {
 import React, { useState } from "react";
 
 import { COLORS, FONTS, SIZES } from "../../constants";
-import { Line } from "../../components";
 
 import { useNavigation } from "@react-navigation/native";
 
@@ -100,41 +99,13 @@ export default function OnBoarding() {
                 alignItems: "center",
               }}
             >
-              {/* <Image
-                source={require("../../images/background/01.png")}
-                style={{ height: "100%", width: "100%" }}
-              /> */}
               <View
                 style={{
                   position: "absolute",
                 }}
               >
                 <View style={{ height: 20 }} />
-                {/* <Line /> */}
-                {/* <Text
-                  style={{
-                    marginVertical: 14,
-                    ...FONTS.H1,
-                    textAlign: "center",
-                    color: COLORS.black,
-                    marginHorizontal: 80,
-                  }}
-                >
-                  {item.title}
-                </Text> */}
-                {/* <Text
-                  style={{
-                    textAlign: "center",
-                    marginHorizontal: 30,
-                    ...FONTS.Mulish_400Regular,
-                    fontSize: 16,
-                    color: COLORS.gray,
-                    lineHeight: 16 * 1.7,
-                    marginBottom: 34,
-                  }}
-                >
-                  {item.description}
-                </Text> */}
+
                 <TouchableOpacity
                   style={{
                     width: 255,
@@ -147,7 +118,7 @@ export default function OnBoarding() {
                     marginBottom: 30,
                     marginTop: 300,
                   }}
-                  onPress={() => navigation.navigate("SignIn")}
+                  onPress={() => navigation.navigate("LoginForm")}
                 >
                   <Text
                     style={{
