@@ -138,8 +138,7 @@ export function LoginForm (){
       borderBottomColor: "#DDDDDD",
     },
     inputContainer: {
-      width: "80%",
-      marginLeft: 10,
+      width: "100%",
     },
     email: {
       color: "gray",
@@ -177,17 +176,19 @@ export function LoginForm (){
     or: {
       alignSelf: "center",
       fontSize: 20,
-      marginTop: 20,
-      marginBottom: 20,
+      marginTop: 10,
+      marginBottom: 10,
     },
     passwordForgotten: {
       textAlign: "right",
-      marginTop: 48,
+      marginTop: 10,
       marginRight: 10,
     },
   
     standardConnexion: {
       backgroundColor: "white",
+      width: "80%",
+      alignSelf: "center",
     },
   
     standardConnexionBtn: {
@@ -209,9 +210,7 @@ export function LoginForm (){
     },
   
     connexion: {
-      width: 344,
-      alignSelf: "center",
-      marginTop: 50,
+      marginTop: 10,
     },
   
     iconBtn: {
